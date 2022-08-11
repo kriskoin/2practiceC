@@ -1,9 +1,6 @@
 # 2practiceC
 ## Longest subarray
 Longest subarray in which all elements are greater than K
-
-Difficulty Level : Basic
-Last Updated : 04 Jul, 2022
 Given an array of N integers and a number K, the task is to find the length of the longest subarray in which all the elements are greater than K. 
 Examples: 
  
