@@ -1,15 +1,19 @@
 /*
 how to compile:
- g++ -Wall program.cpp -o program
+mkdir build
+cd build
+cmake ..
+make
 
  how to run
+ cd build
 ./program
 
 */
 #include <vector>
 #include <iostream>
 
-static int countNumbers(const std::vector<int>& sortedVector, int lessThan){
+static int binarySearch(const std::vector<int>& sortedVector, int lessThan){
    
     if (!((int )sortedVector.size())){
         return 0;
@@ -36,6 +40,6 @@ static int countNumbers(const std::vector<int>& sortedVector, int lessThan){
 int main(){
     
     std::vector<int> v { 12, 23, 50, 70 };
-    std::cout << countNumbers(v, 35)<<std::endl;
+    std::cout << binarySearch(v, 35)<<std::endl;
     return 0;
 }
