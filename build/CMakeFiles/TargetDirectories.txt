@@ -1,3 +1,0 @@
-/mnt/c/Users/kriskoin/Documents/MyGitHub/2practiceC/build/CMakeFiles/rebuild_cache.dir
-/mnt/c/Users/kriskoin/Documents/MyGitHub/2practiceC/build/CMakeFiles/program.dir
-/mnt/c/Users/kriskoin/Documents/MyGitHub/2practiceC/build/CMakeFiles/edit_cache.dir
