@@ -1,14 +1,7 @@
 # 2practiceC
-## Longest subarray
-Longest subarray in which all elements are greater than K
-Given an array of N integers and a number K, the task is to find the length of the longest subarray in which all the elements are greater than K. 
-Examples: 
- 
+## countNumbers
+Implement function countNumbers that accepts a sorted vector of integers and counts the number of vector elements that are less than the parameter lessThan.
 
-Input: a[] = {3, 4, 5, 6, 7, 2, 10, 11}, K = 5 
-Output: 2 
-There are two possible longest subarrays of length 2. 
-They are {6, 7} and {10, 11}.
-Input: a[] = {8, 25, 10, 19, 19, 18, 20, 11, 18}, K = 13 
-Output: 4 
-The longest subarray is {19, 19, 18, 20}. 
+For example, for vector v containing { 1, 3, 5, 7 }, countNumbers(v, 4) should return 2 because there are two vector elements less than 4.
+ 
+ static int countNumbers(const std::vector<int>& sortedVector, int lessThan)
