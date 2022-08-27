@@ -1,2 +1,4 @@
 # 2practiceC
-a repository to practice some c++ tests
+## binary search
+Example code for binary search
+the search is made on a sorted array
