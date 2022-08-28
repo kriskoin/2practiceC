@@ -1,19 +1,21 @@
-cmake_minimum_required(VERSION 3.9)
+#add_executable(test1 test1.cpp)
+#add_subdirectory( algo )
+#target_link_libraries(test1 algo_library)
+#enable_testing()
+#add_test(NAME test1  COMMAND test1)
 
-project(binary_search)
+cmake_minimum_required(VERSION 3.10.2)
 
-add_subdirectory(algo)
+project(algo)
+add_subdirectory( algo )
 
 file(GLOB SOURCE_FILES *.c *.cpp)
-
-enable_testing()
-
 foreach(SOURCE_PATH ${SOURCE_FILES})
     
     get_filename_component(EXECUTABLE_NAME ${SOURCE_PATH} NAME_WE)
     add_executable(${EXECUTABLE_NAME} ${SOURCE_PATH} )
-    target_link_libraries(${EXECUTABLE_NAME} algo_library)
-
+    target_link_libraries(${EXECUTABLE_NAME}  algo_library)
+    enable_testing()
     add_test(NAME ${EXECUTABLE_NAME}  COMMAND ${EXECUTABLE_NAME})
 
 endforeach(SOURCE_PATH ${SOURCE_FILES})

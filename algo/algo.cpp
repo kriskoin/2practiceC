@@ -2,9 +2,7 @@
 #include "algo.h"
 #endif
 
-
-
-static int binarySearch(const std::vector<int>& sortedVector, int lessThan){
+int binarySearch(const std::vector<int>& sortedVector, int lessThan){
    
     if (!((int )sortedVector.size())){
         return 0;
@@ -19,11 +17,6 @@ static int binarySearch(const std::vector<int>& sortedVector, int lessThan){
     if (sortedVector[vecSize-1]<lessThan){
         return vecSize;
     }
-/*
-    int s = 0;
-    int f = (int)sortedVector.size() /2 ;
-    while (s<f){
 
-    }*/
     return 0;
 }

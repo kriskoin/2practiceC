@@ -17,10 +17,11 @@ make
 #include "algo.h"
 #endif
 
+	
 int main(){
     
     std::vector<int> v { 12, 23, 50, 70 };
     std::cout<< "Test file: " <<__FILE__<<std::endl;
-    //std::cout << binarySearch(v, 35)<<std::endl;
+    std::cout << binarySearch(v, 35)<<std::endl;
     return 0;
 }
