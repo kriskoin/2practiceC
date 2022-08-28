@@ -1,8 +1,14 @@
-#add_executable(test1 test1.cpp)
-#add_subdirectory( algo )
-#target_link_libraries(test1 algo_library)
-#enable_testing()
-#add_test(NAME test1  COMMAND test1)
+#
+#
+#  @author  (C) 2022 by kriskoin [ https://github.com/kriskoin ]
+#  @version 1.1.0
+# 
+#  @section DESCRIPTION
+#   This is template to practice programming algorithms in c++
+# 
+#     GitHub:        https://github.com/kriskoin/2practiceC
+#
+#
 
 cmake_minimum_required(VERSION 3.10.2)
 
