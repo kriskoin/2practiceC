@@ -4,6 +4,8 @@
  * @version 1.1.0
  *
  * @section DESCRIPTION
+ * 
+ *  This is template to practice programming algorithms in c++
  *
  *    GitHub:        https://github.com/kriskoin/2practiceC
  *

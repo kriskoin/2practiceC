@@ -1,7 +1,7 @@
 # 2practiceC
 ## An small template 
 This is template to practice programming algorithms in c++
-use **cmake** ver **3.10.2** to create the tests for each **.cpp** or **.c** file within the directory
+using **cmake** ver **3.10.2** to create the tests for each **.cpp** or **.c** file within the directory
 ## Instructions
 1) Implement the algorithm/function/calls  within the *algo* subdirectory
 
