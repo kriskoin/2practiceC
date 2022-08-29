@@ -21,8 +21,7 @@ int binarySearch(const std::vector<int>& sortedVector, int b,int e, int element)
         return -1;
     }
 
-    int p = b+(e-b/2);
-    std::cout<<"p: "<<p<<" b: "<<b<<" e: "<<e<<std::endl;
+    int p = (b+e)/2;
     
     //element bigger than the maximun
     if (sortedVector[p]==element){

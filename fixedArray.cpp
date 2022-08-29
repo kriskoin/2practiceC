@@ -48,13 +48,12 @@ int main(){
     int vecSize= (int)v.size();
 
     //7 lower than smaller element  expect -1
-    //assert (-1 ==  binarySearch(v,0,vecSize-1 ,7));
-
-   // assert (2 ==  binarySearch(v ,0,vecSize-1,50));
-    //end corner cases
-
+    assert (-1 ==  binarySearch(v,0,vecSize-1 ,7));
+    assert (1 ==  binarySearch(v ,0,vecSize-1,23));
     assert (4 ==  binarySearch(v ,0,vecSize-1,100));
-    assert (4 ==  binarySearch(v ,0,vecSize-1,70));
+    assert (3 ==  binarySearch(v ,0,vecSize-1,70));
+    assert (-1 ==  binarySearch(v,0,vecSize-1 ,55));
+    //end corner cases
 
 
     printVector(v);
