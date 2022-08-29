@@ -2,21 +2,39 @@
 #include "algo.h"
 #endif
 
-int binarySearch(const std::vector<int>& sortedVector, int lessThan){
-   
-    if (!((int )sortedVector.size())){
-        return 0;
+int binarySearch(const std::vector<int>& sortedVector, int b,int e, int element){
+     if (e < b){
+        return -1;
+    }
+    if ( b > e){
+        return -1;
     }
 
-    if (lessThan<sortedVector[0]){
-        return 0;
+
+    //dont exits element minor than the lowest element
+    if (element < sortedVector[b]){
+        return -1;
     }
 
-    int vecSize = (int)sortedVector.size();
-
-    if (sortedVector[vecSize-1]<lessThan){
-        return vecSize;
+    //element bigger than the maximun
+    if (sortedVector[e]<element){
+        return -1;
     }
 
-    return 0;
+    int p = b+(e-b/2);
+    std::cout<<"p: "<<p<<" b: "<<b<<" e: "<<e<<std::endl;
+    
+    //element bigger than the maximun
+    if (sortedVector[p]==element){
+        return p;
+    }
+
+     if (element > sortedVector[p]){
+        return binarySearch(sortedVector,p+1,e,element);
+    }
+
+    if (element < sortedVector[p]){
+        return binarySearch(sortedVector,b,p-1,element);
+    }
+
 }

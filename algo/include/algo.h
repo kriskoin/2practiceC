@@ -13,8 +13,11 @@
 #ifndef __ALGO_H
 #define __ALGO_H
 
-#include <vector>
+#include <iostream>
 
-int binarySearch(const std::vector<int>& sortedVector, int lessThan);
+#include <vector>
+//returns the position of the element within the sorted array
+// returns -1 if no exits
+int binarySearch(const std::vector<int>& sortedVector, int b,int e, int element);
 		
 #endif
