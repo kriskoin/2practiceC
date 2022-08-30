@@ -23,6 +23,7 @@ ctest
 #include "algo.h"
 #endif
 
+#define MEDIUM_SIZE 1000
 
 void printVector(std::vector<int> v){
     std::vector<int>::iterator it;
@@ -55,7 +56,20 @@ int main(){
     assert (-1 ==  binarySearch(v,0,vecSize-1 ,55));
     //end corner cases
 
-
     printVector(v);
+
+    //fill the vector with 
+    v.clear();
+
+    for(int i=0;i<=MEDIUM_SIZE;i++){
+        v.insert(v.end(),i);
+    }
+    //TODO: Fix this!!
+    for(int i=1;i<=MEDIUM_SIZE;i++){
+         assert (i-1 ==  binarySearch(v,0,vecSize-1 ,i));
+    }
+     
+
+
     return 0;
 }
