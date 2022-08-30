@@ -17,7 +17,7 @@ ctest
 
 #include <vector>
 #include <iostream>
-
+#include <assert.h>
 #ifndef __ALGO_H
 #include "algo.h"
 #endif
@@ -26,7 +26,7 @@ ctest
 
 int main(){
     
-    std::vector<int> v { 12, 23, 50, 70 };
-    std::cout << binarySearch(v, 35)<<std::endl;
+    std::vector<int> v {  1, 3, 5, 7};
+    assert(2,countNumbersv1(v,4));
     return 0;
 }

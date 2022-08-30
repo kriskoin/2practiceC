@@ -2,21 +2,13 @@
 #include "algo.h"
 #endif
 
-int binarySearch(const std::vector<int>& sortedVector, int lessThan){
-   
-    if (!((int )sortedVector.size())){
-        return 0;
-    }
 
-    if (lessThan<sortedVector[0]){
-        return 0;
-    }
-
-    int vecSize = (int)sortedVector.size();
-
-    if (sortedVector[vecSize-1]<lessThan){
-        return vecSize;
-    }
-
+int countNumbersv1(const std::vector<int>& sortedVector, int lessThan){
+   int counter = 0;  
+   for (unsigned i=0; i<sortedVector.size(); i++){
+       if (sortedVector[i]>lessThan) 
+            return counter-1;
+        counter++;
+   }
     return 0;
 }
