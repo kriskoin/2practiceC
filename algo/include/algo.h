@@ -19,6 +19,7 @@
 /**
  *
  *  countNumbersv1 implements a linear search
+ *  countNumbersv2 implements a linear search
  *
  * @param sortedVector - vector with the sorted numbers,
  * @param lessThan - 
@@ -37,5 +38,6 @@
  *
  */
 int countNumbersv1(const std::vector<int>& sortedVector, int lessThan);
+int countNumbersv2(const std::vector<int>& sortedVector, int lessThan);
 		
 #endif
