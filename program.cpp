@@ -9,7 +9,7 @@ make
  cd build
 ./program
 
-hot to test
+how to test
 cd build
 ctest
 
@@ -24,11 +24,14 @@ ctest
 #endif
 
 int main(){
-    std::vector<int> v {  7, 13, 25, 37, 40, 45, 50, 51, 52, 99, 150};
-    std::cout<<"r: "<<countNumbersv1(v,200)<<std::endl;
+                     //         3            6          9           12          15
+    std::vector<int> v { 7, 13, 15, 15, 15, 25, 37, 40, 45, 45, 45, 50, 51, 52, 99, 150};
+    assert(0 == countNumbersv1(v,7));
     assert(0 == countNumbersv1(v,4));
-    assert(4 == countNumbersv1(v,38));
-    assert(10 == countNumbersv1(v,150));
-    assert(11 == countNumbersv1(v,200));
+    assert(7 == countNumbersv1(v,38));
+    assert(15 == countNumbersv1(v,150));
+    assert(16 == countNumbersv1(v,200));
+    assert(5 == countNumbersv1(v,16));
+    assert(8 == countNumbersv1(v,45));
     return 0;
 }
