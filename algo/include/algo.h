@@ -15,6 +15,6 @@
 
 #include <vector>
 
-int binarySearch(const std::vector<int>& sortedVector, int lessThan);
+
 		
 #endif

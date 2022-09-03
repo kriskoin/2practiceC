@@ -1,18 +1,6 @@
 # 2practiceC
-## An small template 
-This is template to practice programming algorithms in c++
-using **cmake** ver **3.10.2** to create the tests for each **.cpp** or **.c** file within the directory
-## Instructions
-1) Implement the algorithm/function/calls  within the *algo* subdirectory
-
-2) Create your tests on the main directory
-use the follow include on your **.c .cpp** files
-
-```
-#ifndef __ALGO_H
-#include "algo.h"
-#endif
-```
+## sub array algorithms
+This code implements some algoritms to resolve subarray problems
 
 ### How to build
 cd build
