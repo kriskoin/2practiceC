@@ -13,7 +13,35 @@
 #ifndef __ALGO_H
 #define __ALGO_H
 
+#include <iostream>
 #include <vector>
+
+class CNode {
+    public:
+    
+    CNode(CNode * left,int val, CNode * right);
+
+    CNode * getLeft();
+    int getVal();
+    CNode * getRight();
+    void setLeft(CNode * n);
+    void setRight(CNode * n);
+
+    private:
+    CNode * left;
+    int val;
+    CNode * right;
+
+};
+
+class CBinaryTreeSearch{
+
+    public:
+        bool  find(CNode * root, int val); 
+};
+
+void binaryTreeAddNode (CNode * node, int newVal);
+void binaryTreePrintInorder (CNode * node);
 
 
 		
