@@ -18,6 +18,7 @@ int countNumbersv1(const std::vector<int>& sortedVector, int lessThan){
    }
     return counter;
 }
+
 //another form of for
 int countNumbersv2(const std::vector<int>& sortedVector, int lessThan){
    int counter = 0;  
@@ -55,4 +56,49 @@ int countNumbersv3(const std::vector<int>& sortedVector,int start,int end, int l
         return countNumbersv3(sortedVector,p+1,end,lessThan);
     }
     
+}
+
+int countNumbersv4(const std::vector<int>& sortedVector,int start,int end, int lessThan){
+
+    if ((start == 0 )&&(end == (int)sortedVector.size()-1)){
+        if (sortedVector[0]>lessThan)
+            return 0;
+        if (sortedVector[end]<lessThan)
+            return (int)sortedVector.size();
+    }
+
+   if (start > end)
+        return end+1;
+    
+    int p ;
+    if(start+end){
+        p = (start +end) /2;
+    }else{
+         p = 0;
+    }
+
+    if (sortedVector[p]>=lessThan){
+        return countNumbersv3(sortedVector,start,p-1,lessThan);
+    }
+
+    if (sortedVector[p]<lessThan){
+        return countNumbersv3(sortedVector,p+1,end,lessThan);
+    }
+    
+}
+
+
+int countNumbersv5(const std::vector<int>& sortedVector, int lessThan){
+    std::vector<int>::const_iterator it;
+    it = std::lower_bound (sortedVector.begin(), sortedVector.end(), lessThan);
+    return std::distance(sortedVector.begin(),it);
+}
+
+int countNumbersv6(const std::vector<int>& sortedVector, int lessThan){
+    auto it = std::lower_bound (sortedVector.begin(), sortedVector.end(), lessThan);
+    return std::distance(sortedVector.begin(),it);
+}
+
+int countNumbersv7(const std::vector<int>& sortedVector, int lessThan){
+    return std::distance(sortedVector.begin(),std::lower_bound (sortedVector.begin(), sortedVector.end(), lessThan));
 }
