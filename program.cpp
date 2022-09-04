@@ -4,6 +4,7 @@
 #include <stdexcept>
 #include <iostream>
 #include <map>
+#include <set>
 
 class MovingTotal
 {
@@ -11,17 +12,21 @@ public:
 
     void append(const std::vector<int>& list) 
     {
-        std::map<std::vector<int>::iterator it;
-        it=listTotals.find(list);
-        if(it==listTotals.end()){
+        std::map<std::vector<int>,int>::iterator it;
+        it=listArrays.find(list);
+        
+        if(it==listArrays.end()){
             //new list
-            std::vector<int> totals
-            ret = mymap.insert ( std::vector<int> *, std::vector<int>(list,totals) );
-            calculateTotals(ret->first,ret->second);
+        
+            //std::map<std::vector<int>,int>::iterator ret = listArrays.insert ( std::make_pair(list,0) );
+            it = listArrays.insert ( std::make_pair(list,0) );
+            //listArrays.insert ( std::make_pair(list,0) );
+            //this->calculateTotals(&ret);
         }else{
             //old list
-
+            this->calculateTotals(&it);
         }
+        
     }
     
     bool contains(int total) 
@@ -29,10 +34,11 @@ public:
         throw std::logic_error("Waiting to be implemented");
     }
     private:
-    void calculateTotals(std::vector<int> *, std::vector<int>){
+    void calculateTotals(const std::map<std::vector<int>,int>::iterator * it){
 
     } 
-    std::map<std::vector<int> *, std::vector<int>> listTotals;
+    std::map<std::vector<int> , int> listArrays;
+    std::set<int> listTotals;
 };
 
 #ifndef RunTests
