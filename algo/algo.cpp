@@ -3,78 +3,23 @@
 #endif
 
 
+void ShiffTotal::append(const std::vector<int>& list) 
+{
+    //std::pair<std::map<std::vector<int>,int>::iterator,bool> ret = listArrays.insert ( std::make_pair(list,0) );
+    //this->calculateTotals(&ret.first);   
+}
 
-CNode::CNode(CNode * left,int val, CNode * right){
-        this->left = left;
-        this->val = val;
-        this->right = right;
-};
-
-CNode * CNode::getLeft(){
-    return this->left;
-};
-
-int CNode::getVal(){
-    return this->val;
-};
-
-CNode * CNode::getRight(){
-    this->right;
-};
-
-void CNode::setLeft(CNode * n){
-    n->left = n;
-};
-
-void CNode::setRight(CNode * n){
-    this->right = n ;
-};
-
-bool  CBinaryTreeSearch::find(CNode * node, int val){
+bool ShiffTotal::contains(int total) 
+{
     
+}
 
-    if(val==node->getVal()){
-        return true;
-    }
+void ShiffTotal::calculateTotals(const std::map<std::vector<int> ,int>::iterator * it){
 
-    if (val<node->getVal() && node->getLeft()!= nullptr){
-        return find(node->getLeft(),val);
-    }
+    const short k = 3;
+    int p = 1;
+    //std::vector<int>* list =  it->first;
+    //for(int i =  it->second;list.size();i++ ){
 
-    if (val>node->getVal() && node->getRight()!= nullptr){
-        return find(node->getRight(),val);
-    }
-    return false;
-}; 
-
-
-void binaryTreeAddNode (CNode * node, int newVal){
-    if(newVal<node->getVal()){
-        if(node->getLeft()!=nullptr){
-            binaryTreeAddNode(node->getLeft(),newVal);
-        }else{
-            CNode* n = new CNode(nullptr,newVal,nullptr);
-            node->setLeft(n);
-        }
-    }
-    if(newVal>node->getVal()){
-        if(node->getRight()!=nullptr){
-            binaryTreeAddNode(node->getRight(),newVal);
-        }else{
-            CNode* n = new CNode(nullptr,newVal,nullptr);
-            node->setRight(n);
-        }
-
-    }
-};
-
-void binaryTreePrintInorder (CNode * node){
-    if(node->getLeft() == nullptr){
-        std::cout<<node->getVal();
-    }else{
-
-    }
-
-};
-
-
+   // }
+} 

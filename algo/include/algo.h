@@ -15,34 +15,26 @@
 
 #include <iostream>
 #include <vector>
-
-class CNode {
+#include <map>
+#include <set>
+class ShiffTotal
+{
     public:
-    
-    CNode(CNode * left,int val, CNode * right);
-
-    CNode * getLeft();
-    int getVal();
-    CNode * getRight();
-    void setLeft(CNode * n);
-    void setRight(CNode * n);
-
+        /**
+         *
+         *  append 
+         *
+         * @param list - vector with at least 3 order (asc) elements 
+         * 
+         * @pre list must be a sorted vector in ascendent order
+         *
+         */
+        void append(const std::vector<int>& list) ;
+        bool contains(int total) ;
     private:
-    CNode * left;
-    int val;
-    CNode * right;
-
+        void calculateTotals(const std::map<std::vector<int> ,int>::iterator * it);
+        std::map<std::vector<int>, int> listArrays;
+        std::set<int> listTotals;
 };
-
-class CBinaryTreeSearch{
-
-    public:
-        bool  find(CNode * root, int val); 
-};
-
-void binaryTreeAddNode (CNode * node, int newVal);
-void binaryTreePrintInorder (CNode * node);
-
-
 		
 #endif
